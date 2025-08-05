@@ -6,24 +6,27 @@ import { Component } from '@angular/core';
   styleUrls: ['./hero.component.css']
 })
 export class HeroComponent {
-public name:string="iroman";
-public  age:number=45;
-get capitalizarNombre():string{
-  return this.name.toUpperCase();
-}
-getHeroDescripcion():string{
-  return `${this.name}-${this.age}`;
-}
-changeHero():void{
-   this.name='Speederman';
-}
-changeAge():void{
-this.age=23
-}
-resetForm():void{
-  this.name='iroman'
-  this.age=45
+  public name: string = 'ironman'; // Fixed spelling
+  public age: number = 45;
+
+  get capitalizedName(): string { // Better naming convention
+    return this.name.toUpperCase();
   }
 
+  getHeroDescription(): string { // Fixed spelling and better naming
+    return `${this.name} - ${this.age}`;
+  }
 
+  changeHero(): void {
+    this.name = 'spiderman'; // Consistent naming
+  }
+
+  changeAge(): void {
+    this.age = 23;
+  }
+
+  resetForm(): void {
+    this.name = 'ironman';
+    this.age = 45;
+  }
 }
