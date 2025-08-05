@@ -1,6 +1,6 @@
 <h3>listado de Heroes</h3>
-<div *ngIf="deleteHero; else nothingWasDeleted ">
-<h3>Heroe Borrado:<small class="text-danger">{{deleteHero}}</small></h3>
+<div *ngIf="deletedHero; else nothingWasDeleted ">
+<h3>Heroe Borrado:<small class="text-danger">{{deletedHero}}</small></h3>
 </div>
 <ng-template #nothingWasDeleted>
   <h3>No ha borrado nada</h3>

@@ -7,15 +7,13 @@ import { Component } from '@angular/core';
 })
 export class ListComponent {
   public heroNames: string[] = [
-    'Spiderman', 'Iroman', 'hulk', 'She hulk'
-  ]
+    'Spiderman', 'Ironman', 'Hulk', 'She-Hulk' // Fixed capitalization consistency
+  ];
 
-  public deleteHero?: string
+  public deletedHero?: string; // Better naming
+
   public removeLastHero(): void {
-    this.deleteHero = this.heroNames.pop();
-
-    /*const deleteHero=this.heroNames.pop();
-    console.log({deleteHero})*/
+    this.deletedHero = this.heroNames.pop();
   }
 }
 
